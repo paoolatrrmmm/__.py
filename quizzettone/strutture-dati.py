@@ -1,25 +1,45 @@
 # dizionari
 
 personaggio1: dict[str,str] = {
-    "nome" : "Pippo"
-    "tipo" : "cane"
-    "email" : "pippo@disney.com"
+    "nome" : "Pippo",
+    "tipo" : "cane",
+    "email": "pippo@disney.com"
 }
 
-print(personaggio1["email"])
+personaggio2: dict[str,str] = {
+    "nome" : "Topolino",
+    "tipo" : "topo",
+    "email": "topolino@disney.com"
+}
 
-personaggio1["telefono"] = "1234567890"
+personaggi: list[dict[str, str]] = [personaggio1, personaggio2]
 
-personaggio1["telefono"] = "1234567890"
+print(personaggi[1].get("tipo"))
 
-personaggio1["nome"] = "Minnie"
+del personaggio1["tipo"]
 
-print(personaggio1.get{"telefono"})
-print(personaggio1.get{"nome"})
+for x in personaggi:
+    if x.get("tipo") == "topo":
+        x["tipo"]
+    
+    print(x)
 
 
-for chiave, valore in personaggio1.items():
-    print(f"{chiave}:{valore}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # liste
 """
