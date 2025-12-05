@@ -100,7 +100,7 @@ def main():
     lista_domande_length: int = len(lista_domande)
 
     while counter_domanda_corrente < lista_domande_length:
-        content: str = leggi_file(f"domande_risposte/{lista_domande[counter_domanda_corrente]}")
+        content: str = leggi_file(f"domande&risp/{lista_domande[counter_domanda_corrente]}")
         index: int = estrai_index(content)
         domanda_e_risposta["domanda"] = estrai_domanda(content, index)
         domanda_e_risposta["risposta"] = estrai_risposta(content, index)
